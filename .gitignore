@@ -1,0 +1,33 @@
+
+# Создано путем https://www.gitignore.io/api/osx
+# Редактировать на https://www.gitignore.io/?templates=osx
+
+### OSX ###
+# Генеральный
+.DS_Store
+.AppleDouble
+.LSOverride
+
+ Значок # должен заканчиваться на два \r
+Икона
+
+# Ноготь большого пальца
+._*
+
+# Файлы, которые могут отображаться в корневом каталоге Тома
+.DocumentRevisions-V100
+.fseventsd
+.Прожектор-V100
+.TemporaryItems
+.Мусор
+.Объем-то же самое.icns
+. com. apple. timemachine. donotpresent
+
+# Каталоги, потенциально созданные на удаленном общем ресурсе AFP
+.AppleDB
+.AppleDesktop
+Папка Сетевой Корзины
+Временные Предметы
+.apdisk
+
+# Конец https://www.gitignore.io/api/osx
