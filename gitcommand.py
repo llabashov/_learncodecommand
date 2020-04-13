@@ -9,6 +9,7 @@
 #git checkout master - перейти в ветку master
 #git pull - запулить в локальный репозиторий с гитхаба
 #git checkout -b имя-новой-ветки
+git push origin --delete имя_ветки - удалить ветку на сервере
 
 #git init - создать репо 
 #git clone https://github.com/m0zgen/github-examle.git - клонирование С гитхаба на локалку
@@ -27,8 +28,6 @@ git reset имя_файла - отмена git add ДО КОММИТА
 git commit --amend - можно рредактировать текст коммита если коммит не запушен
 git reset --soft HEAD~1 - сохранить все, что сделали, но отмена последнего коммита
 git reset --hard HEAD~1 - полная отмена последнего коммит. HEAD~1 означает один коммит до HEAD, т.е. до текущего положения. 
-
-git push origin --delete имя_ветки - удалить ветку на сервере
 
 git branch -a - Клонировать все ветки с сервера
 
