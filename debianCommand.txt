@@ -39,7 +39,36 @@ pscp.exe "C:\Users\Ilya\PycharmProjects\Bot\bot.py" root@123.123.12.12:/usr/loca
 
 pscp.exe root@123.123.12.12:/usr/local/bin/bot/database "C:\Users\Ilya\Desktop - скачать данные с сервера
 
-
 https://4te.me/post/shpargalka-systemd/
 ШПАРГАЛКА cистемный менеджер, демон инициализации других демонов в Linux. 
 Проще говоря, systemd запустит бота и будет перезапускать его в случае падения.
+
+##############################
+
+Создайте файл на Вашем ПК с именем bot.service с таким содержанием:
+
+[Unit]
+Description=Telegram bot 'Town Wars'
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/local/bin/bot
+ExecStart=/usr/bin/python3 /usr/local/bin/bot/bot.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
+
+
+Далее нужно прописать 4 команды в консоли сервера:
+
+systemctl daemon-reload
+systemctl enable bot
+systemctl start bot
+systemctl status bot
+###############################
+https://habr.com/ru/post/347106/ - пост о том как загрузить бота на серврер
