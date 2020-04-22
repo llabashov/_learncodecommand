@@ -1,0 +1,45 @@
+
+apt-get update
+apt-get install python3
+apt-get install python3-setuptools
+apt-get install python3-pip
+pip3 install pyTelegramBotAPI
+
+apt-get install systemd - системны менеджер
+
+
+apt-get update
+apt-get install mc vim lynx doc-linux-text debian-policy  - установка нескольких дополнительных пакетов
+
+shutdown -h now - завершение работы системы для root
+poweroff -i -f or Ctrl-Alt-Delete - завершение работы системы для пользователя
+
+
+
+
+
+http://qref.sourceforge.net/quick/ch-tutorial.ru.html
+Сразу после перезагрузки системы Вам представляется либо графический экран 
+входа в систему, либо текстовый - в зависимости от изначального выбора пакетов при установке.
+ Для простоты, если Вы видите графический экран для входа, нажмите Ctrl-Alt-F1,
+  чтобы перейти к текстовому экрану входа в систему. [2]
+
+sudo, super, или su -c для получения дозированных привилегий root
+
+
+https://habr.com/ru/post/347106/
+Далее загружаем bot.py, который находится в каталоге C:\Users\Ilya\PycharmProjects\Bot 
+(нужно подставить Ваш каталог) в каталог на сервере /usr/local/bin/bot.
+
+pscp.exe "C:\Users\Ilya\PycharmProjects\Bot\bot.py" root@123.123.12.12:/usr/local/bin/bot
+Строчку root@123.123.12.12 нужно заменить на строчку вида login@IP_address, соответственно с Вашим логином
+и IP-адресом (упомянуты выше в разделе «Как же подключиться к VDS?»). Заменяя bot.py на названия других 
+файлов, загрузите все необходимые.
+
+
+pscp.exe root@123.123.12.12:/usr/local/bin/bot/database "C:\Users\Ilya\Desktop - скачать данные с сервера
+
+
+https://4te.me/post/shpargalka-systemd/
+ШПАРГАЛКА cистемный менеджер, демон инициализации других демонов в Linux. 
+Проще говоря, systemd запустит бота и будет перезапускать его в случае падения.
